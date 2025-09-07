@@ -12,6 +12,12 @@
     {
         bin = Console.ReadLine();
 
+        if (!int.TryParse(bin, out _))
+        {
+            Console.WriteLine("The given binary number is not a valid integer!");
+            return;
+        }
+
         if (bin == null)
         {
             Console.WriteLine("No binary number given!");
@@ -30,7 +36,7 @@
 
             if (num != 0 && num != 1)
             {
-                Console.WriteLine("Only 0 and 1 can appear in the binary number!");
+                Console.WriteLine("Only 0 and 1 can be in the binary number!");
                 return;
             }
 
